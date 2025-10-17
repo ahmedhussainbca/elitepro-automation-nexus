@@ -32,8 +32,7 @@ const CompanyIntro = () => {
     "Automotive",
     "Food & Beverage",
     "Pharmaceuticals",
-    "Textile",
-    "Chemical Processing"
+    "Power Plant"
   ];
 
   return (
@@ -49,14 +48,14 @@ const CompanyIntro = () => {
               Excellence in Industrial Automation
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Established in 2025 and based in Chennai, Tamil Nadu, Elitepro Engineering and Automation 
-              is a cutting-edge industrial automation company dedicated to delivering innovative solutions 
-              that transform manufacturing processes.
+              Welcome to <strong>Elitepro Engineering & Automation</strong>, a trusted name in Industrial Automation and engineering innovation.
+              With years of hands-on expertise, we specialize in SPM (Special Purpose Machines) manufacturing, 
+              material handling and conveyor solutions, turnkey project solutions, and a wide range of allied services.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              With our team of skilled engineers and passion for automation technology, we specialize in 
-              creating efficient, reliable, and cost-effective solutions that help businesses optimize 
-              their operations and achieve superior performance.
+              Being part of this growing industry since its early days, we have developed a deep understanding of the diverse requirements of our clients. 
+              By combining precise technical calculations with meticulous planning, we deliver reliable, efficient, and future-ready solutions. 
+              At Elitepro Engineering & Automation, customer satisfaction is not just a goal—it is our commitment.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
@@ -65,7 +64,7 @@ const CompanyIntro = () => {
                 <p className="text-primary">Established</p>
               </div>
               <div className="text-center p-4 bg-primary/5 rounded-lg">
-                <h3 className="text-2xl font-bold text-accent">10+</h3>
+                <h3 className="text-2xl font-bold text-accent">5+</h3>
                 <p className="text-primary">Team Members</p>
               </div>
             </div>

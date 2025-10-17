@@ -1,17 +1,19 @@
 
-import React, { useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import { Link } from 'react-router-dom';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
+  import React, { useRef, useEffect } from 'react';
+  import { motion } from 'framer-motion';
+  import { Swiper, SwiperSlide } from 'swiper/react';
+  import { Autoplay, Pagination } from 'swiper/modules';
+  import { Link } from 'react-router-dom';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+  import 'swiper/css/autoplay';
+  import heroImage1 from '../assets/googleAI.png';
 
-const HeroSection = () => {
+  function HeroSection() {
   const heroImages = [
     'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
-    'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1920&q=80',
+
+    '/images/googleAI.png',
     'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80'
   ];
 
@@ -52,17 +54,17 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            We Build Everything 
+            We Build Everything
             <span className="text-accent block mt-2">with Passion</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
           >
-            Leading industrial automation solutions provider in Chennai, specializing in PLC programming, SCADA, HMI, and advanced control systems.
+            Leading industrial automation solutions provider in pan India, specializing in PLC programming, SCADA, HMI, and advanced control systems.
           </motion.p>
 
           <motion.div
@@ -88,6 +90,6 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
+}
 
-export default HeroSection;
+  export default HeroSection;

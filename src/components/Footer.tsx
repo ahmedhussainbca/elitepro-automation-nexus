@@ -46,11 +46,11 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-accent" />
-                <span className="text-sm">+91-7943434860</span>
+                <span className="text-sm">+91-9894146942</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-accent" />
-                <span className="text-sm">info@eliteproautomation.com</span>
+                <span className="text-sm">tauqeer@eliteproengg.co.in</span>
               </div>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ const Footer = () => {
                 </p>
               </div>
               <div>
-                <h5 className="font-medium text-accent">Contact Person</h5>
+                <h5 className="font-medium text-accent">Contact</h5>
                 <p className="text-white/80">Tauqeer Ahmed</p>
               </div>
             </div>

@@ -148,7 +148,7 @@ const About = () => {
           >
             <h2 className="text-4xl font-bold mb-8">Our Vision</h2>
             <p className="text-xl leading-relaxed mb-12">
-              To become the leading industrial automation solutions provider in South India, recognized for 
+              To become the leading industrial automation solutions provider in India, recognized for 
               innovation, quality, and customer satisfaction. We envision a future where advanced automation 
               technologies seamlessly integrate with traditional manufacturing processes, creating smarter, 
               more efficient, and sustainable industrial operations.

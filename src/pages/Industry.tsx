@@ -59,30 +59,30 @@ const Industry = () => {
       ],
       image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80'
     },
-    {
-      title: 'Textile',
-      description: 'Automation solutions for textile manufacturing including spinning, weaving, dyeing, and finishing processes.',
-      applications: [
-        'Spinning Automation',
-        'Weaving Control',
-        'Dyeing Process Control',
-        'Quality Inspection',
-        'Material Tracking'
-      ],
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      title: 'Chemical Processing',
-      description: 'Safe and efficient automation for chemical processing with advanced safety systems and environmental monitoring.',
-      applications: [
-        'Batch Processing',
-        'Continuous Processes',
-        'Safety Interlocks',
-        'Environmental Monitoring',
-        'Recipe Management'
-      ],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80'
-    }
+    // {
+    //   title: 'Textile',
+    //   description: 'Automation solutions for textile manufacturing including spinning, weaving, dyeing, and finishing processes.',
+    //   applications: [
+    //     'Spinning Automation',
+    //     'Weaving Control',
+    //     'Dyeing Process Control',
+    //     'Quality Inspection',
+    //     'Material Tracking'
+    //   ],
+    //   image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'
+    // },
+    // {
+    //   title: 'Chemical Processing',
+    //   description: 'Safe and efficient automation for chemical processing with advanced safety systems and environmental monitoring.',
+    //   applications: [
+    //     'Batch Processing',
+    //     'Continuous Processes',
+    //     'Safety Interlocks',
+    //     'Environmental Monitoring',
+    //     'Recipe Management'
+    //   ],
+    //   image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80'
+    // }
   ];
 
   return (

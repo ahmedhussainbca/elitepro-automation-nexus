@@ -152,3 +152,12 @@
 .swiper-pagination-bullet-active {
   background: #ff6b35;
 }
+
+
+body {
+  margin: 0;
+  /* Replace the old font stack with the new one */
+  font-family: 'Montserrat', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

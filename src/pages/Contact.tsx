@@ -97,7 +97,7 @@ const Contact = () => {
                 </div>
 
                 <div className="bg-primary/5 p-6 rounded-lg">
-                  <h3 className="font-semibold text-primary mb-2">Contact Person</h3>
+                  <h3 className="font-semibold text-primary mb-2">Contact</h3>
                   <p className="text-gray-600">Tauqeer Ahmed</p>
                   <p className="text-sm text-gray-500 mt-1">Business Development Manager</p>
                 </div>
@@ -193,7 +193,8 @@ const Contact = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6961267456896!2d80.17855731482166!3d12.994010490854286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526157c1125039%3A0x2b2b7a7a7a7a7a7a!2sRamapuram%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              //src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6961267456896!2d80.17855731482166!3d12.994010490854286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526157c1125039%3A0x2b2b7a7a7a7a7a7a!2sRamapuram%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.793441670415!2d80.1878169!3d13.0277011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52672cab8a9b05%3A0x7531044dc6ec3d48!2sBakthi%20Vedantha%203rd%20Ave%2C%20Manapakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e1!3m2!1sen!2sin!4v1760696426499!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}
