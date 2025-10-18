@@ -16,9 +16,10 @@ const Footer = () => {
   const services = [
     'PLC Programming',
     'SCADA Development',
-    'HMI Programming',
-    'Vision Systems',
-    'Conveyor Solutions'
+    'Conveyor Solutions',
+    'Special Purpose Machines (SPM)',
+    'Electrical Control Panels',
+    'Vision Systems'
   ];
 
   return (

@@ -38,17 +38,17 @@ const Services = () => {
       image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80'
     },
     {
-      id: 'hmi',
-      title: 'HMI Programming',
-      description: 'User-friendly human-machine interface design and programming for intuitive system operation and monitoring.',
+      id: 'conveyor',
+      title: 'Conveyor Systems',
+      description: 'Complete conveyor automation solutions including design, installation, and control system integration.',
       features: [
-        'Intuitive Interface Design',
-        'Touch Screen Programming',
-        'Multi-language Support',
-        'Recipe Management',
-        'Trend Displays'
+        'Belt Conveyor Systems',
+        'Roller Conveyor Systems',
+        'Sortation Systems',
+        'Control Integration',
+        'Safety Systems'
       ],
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'
+      image: '/images/conv.png'
     },
     {
       id: 'vision',
@@ -62,19 +62,6 @@ const Services = () => {
         'Barcode Reading'
       ],
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80'
-    },
-    {
-      id: 'conveyor',
-      title: 'Conveyor Systems',
-      description: 'Complete conveyor automation solutions including design, installation, and control system integration.',
-      features: [
-        'Belt Conveyor Systems',
-        'Roller Conveyor Systems',
-        'Sortation Systems',
-        'Control Integration',
-        'Safety Systems'
-      ],
-      image: 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?auto=format&fit=crop&w=600&q=80'
     }
   ];
 

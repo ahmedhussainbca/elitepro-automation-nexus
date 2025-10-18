@@ -12,29 +12,28 @@ const Industry = () => {
 
   const industries = [
     {
-      title: 'Manufacturing',
-      description: 'Complete automation solutions for manufacturing processes including assembly lines, quality control, and production monitoring.',
-      applications: [
-        'Assembly Line Automation',
-        'Quality Control Systems',
-        'Production Monitoring',
-        'Inventory Management',
-        'Process Optimization'
-      ],
-      image: '/images/manu.png'
-    },
-    {
       title: 'Automotive',
       description: 'Advanced automation systems for automotive production including robotic welding, painting, and assembly operations.',
       applications: [
         'Pick and Place Systems',
-        'Vision System-based Poka-Yoke',
-        'Measurement Systems',
+        'Vision based Poka-Yoke & Measurement',
         'Testing & Validation',
         'Paint Booth Automation'
         
       ],
       image: '/images/carpaint.png'
+    },
+    {
+      title: 'Electronics',
+      description: 'Comprehensive automation solutions for electronics manufacturing — enhancing precision, productivity, and quality across production and testing processes.',
+      applications: [
+        'PCB assembly automation',
+        'Vision-based inspection systems',
+        'Pick & place operations',
+        'Functional testing setups',
+        'ESD-safe conveyors and handling'
+      ],
+      image: '/images/elec.png'
     },
     {
       title: 'Food & Beverage',

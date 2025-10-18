@@ -36,8 +36,8 @@ const CompanyIntro = () => {
   ];
 
   const industries = [
-    "Manufacturing",
     "Automotive",
+    "Electronics",    
     "Food & Beverage",
     "Pharmaceuticals",
     "Power Plant"
