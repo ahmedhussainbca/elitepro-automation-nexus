@@ -40,10 +40,9 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/80 mb-4">
-              Leading industrial automation solutions provider specializing in PLC programming, 
-              SCADA, HMI, and advanced control systems.
+              Leading industrial automation solutions provider specializing in Special Purpose Machines, Conveyor Systems, PLC programming, SCADA, and advanced control systems such as vision-based Poka-Yoke and measurement solutions.
             </p>
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-accent" />
                 <span className="text-sm">+91-9894146942</span>
@@ -52,7 +51,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-accent" />
                 <span className="text-sm">tauqeer@eliteproengg.co.in</span>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -108,7 +107,17 @@ const Footer = () => {
               </div>
               <div>
                 <h5 className="font-medium text-accent">Contact</h5>
-                <p className="text-white/80">Tauqeer Ahmed</p>
+                <div className="space-y-2">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-accent" />
+                <span className="text-sm">+91-9894146942</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-accent" />
+                <span className="text-sm">tauqeer@eliteproengg.co.in</span>
+              </div>
+            </div> 
+                {/*<p className="text-white/80">Tauqeer Ahmed</p>*/}
               </div>
             </div>
           </motion.div>

@@ -125,7 +125,7 @@ const About = () => {
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
                     <span className="text-gray-600">Team Size</span>
-                    <span className="font-semibold text-primary">10+ Professionals</span>
+                    <span className="font-semibold text-primary">5+ Professionals</span>
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-gray-600">Specialization</span>

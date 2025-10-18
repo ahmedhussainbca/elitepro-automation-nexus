@@ -26,10 +26,10 @@ const Header = () => {
     {
       name: 'About Us',
       path: '/about',
-      dropdown: [
-        { name: 'Vision', path: '/about#vision' },
-        { name: 'Team', path: '/about#team' }
-      ]
+      // dropdown: [
+      //   { name: 'Vision', path: '/about#vision' },
+      //   { name: 'Team', path: '/about#team' }
+      // ]
     },
     { name: 'Industry', path: '/industry' },
     {

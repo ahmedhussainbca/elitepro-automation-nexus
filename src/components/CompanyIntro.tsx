@@ -18,8 +18,16 @@ const CompanyIntro = () => {
       description: "Supervisory control and data acquisition systems for real-time monitoring"
     },
     {
-      title: "HMI Design",
-      description: "Human-machine interface development for intuitive system control"
+      title: "Conveyor Systems",
+      description: "Design and integration of conveyor automation solutions for efficient material handling."
+    },
+    {
+      title: "Special Purpose Machines (SPM)",
+      description: "Customized machine solutions tailored for specific industrial applications and enhanced productivity."
+    },
+    {
+      title: "Electrical Control Panels",
+      description: "Design, assembly, and commissioning of control panels ensuring reliable and safe operation of automation systems."
     },
     {
       title: "Vision Systems",

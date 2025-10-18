@@ -11,9 +11,12 @@
 
   function HeroSection() {
   const heroImages = [
+    '/images/plcman.jpg',
     'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
 
     '/images/googleAI.png',
+    '/images/power.jpg',
+    '/images/plc.jpg',
     'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80'
   ];
 
@@ -64,7 +67,7 @@
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
           >
-            Leading industrial automation solutions provider in pan India, specializing in PLC programming, SCADA, HMI, and advanced control systems.
+            Leading industrial automation solutions provider across India, specializing in Special Purpose Machines, Conveyor Systems, PLC programming, SCADA, and advanced control systems such as vision-based Poka-Yoke and measurement solutions.
           </motion.p>
 
           <motion.div

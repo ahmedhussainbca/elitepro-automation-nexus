@@ -21,19 +21,20 @@ const Industry = () => {
         'Inventory Management',
         'Process Optimization'
       ],
-      image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=600&q=80'
+      image: '/images/manu.png'
     },
     {
       title: 'Automotive',
       description: 'Advanced automation systems for automotive production including robotic welding, painting, and assembly operations.',
       applications: [
-        'Robotic Welding Systems',
-        'Paint Booth Automation',
-        'Component Assembly',
+        'Pick and Place Systems',
+        'Vision System-based Poka-Yoke',
+        'Measurement Systems',
         'Testing & Validation',
-        'Material Handling'
+        'Paint Booth Automation'
+        
       ],
-      image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80'
+      image: '/images/carpaint.png'
     },
     {
       title: 'Food & Beverage',
@@ -45,7 +46,7 @@ const Industry = () => {
         'Hygiene Monitoring',
         'Batch Processing'
       ],
-      image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=600&q=80'
+      image: '/images/food.png'
     },
     {
       title: 'Pharmaceuticals',
@@ -57,7 +58,7 @@ const Industry = () => {
         'Environmental Monitoring',
         'Validation Documentation'
       ],
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80'
+      image: '/images/pham.png'
     },
     // {
     //   title: 'Textile',
