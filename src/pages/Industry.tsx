@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
@@ -19,7 +18,6 @@ const Industry = () => {
         'Vision based Poka-Yoke & Measurement',
         'Testing & Validation',
         'Paint Booth Automation'
-        
       ],
       image: '/images/carpaint.png'
     },
@@ -59,31 +57,26 @@ const Industry = () => {
       ],
       image: '/images/pham.png'
     },
-    // {
-    //   title: 'Textile',
-    //   description: 'Automation solutions for textile manufacturing including spinning, weaving, dyeing, and finishing processes.',
-    //   applications: [
-    //     'Spinning Automation',
-    //     'Weaving Control',
-    //     'Dyeing Process Control',
-    //     'Quality Inspection',
-    //     'Material Tracking'
-    //   ],
-    //   image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80'
-    // },
-    // {
-    //   title: 'Chemical Processing',
-    //   description: 'Safe and efficient automation for chemical processing with advanced safety systems and environmental monitoring.',
-    //   applications: [
-    //     'Batch Processing',
-    //     'Continuous Processes',
-    //     'Safety Interlocks',
-    //     'Environmental Monitoring',
-    //     'Recipe Management'
-    //   ],
-    //   image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80'
-    // }
+    {
+      title: 'Power Plant',
+      description: 'Advanced automation and control solutions for power generation, transmission, and utility management',
+      applications: [
+        'Turbine Control Systems',
+        'Boiler Automation',
+        'Energy Monitoring',
+        'Fuel Handling Systems',
+        'SCADA for Power Distribution'
+      ],
+      image: '/images/powerindus.png'
+    },
   ];
+
+  // --- MODIFICATION START ---
+  // Separate the last item to be centered from the rest of the grid items
+  const powerPlantIndustry = industries.find(industry => industry.title === 'Power Plant');
+  const otherIndustries = industries.filter(industry => industry.title !== 'Power Plant');
+  // --- MODIFICATION END ---
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -130,8 +123,11 @@ const Industry = () => {
 
       <section ref={industriesRef} className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
+          {/* Grid for the first 4 items */}
           <div className="grid lg:grid-cols-2 gap-12 space-y-12 lg:space-y-0">
-            {industries.map((industry, index) => (
+            {/* --- MODIFICATION START --- */}
+            {otherIndustries.map((industry, index) => (
+            // --- MODIFICATION END ---
               <motion.div
                 key={industry.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -169,6 +165,50 @@ const Industry = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* --- MODIFICATION START --- */}
+          {/* Centered container for the last item */}
+          {powerPlantIndustry && (
+            <div className="mt-12 lg:grid lg:place-items-center">
+              <motion.div
+                key={powerPlantIndustry.title}
+                initial={{ opacity: 0, y: 50 }}
+                animate={industriesInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: otherIndustries.length * 0.1 }}
+                className="bg-white rounded-lg shadow-lg overflow-hidden lg:max-w-[calc(50%-1.5rem)]" // Constrain width on large screens
+              >
+                <div className="relative h-64">
+                  <img
+                    src={powerPlantIndustry.image}
+                    alt={powerPlantIndustry.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-primary/20"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-2xl font-bold text-white">{powerPlantIndustry.title}</h3>
+                  </div>
+                </div>
+                
+                <div className="p-8">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {powerPlantIndustry.description}
+                  </p>
+                  
+                  <h4 className="text-lg font-semibold text-primary mb-4">Key Applications:</h4>
+                  <ul className="space-y-2">
+                    {powerPlantIndustry.applications.map((application, appIndex) => (
+                      <li key={appIndex} className="flex items-center text-gray-600">
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                        {application}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
+          )}
+          {/* --- MODIFICATION END --- */}
+
         </div>
       </section>
 
