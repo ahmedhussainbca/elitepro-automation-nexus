@@ -128,7 +128,11 @@ const Footer = () => {
           <p className="text-white/60">
             © 2025 Elitepro Engineering and Automation. All rights reserved.
           </p>
+          <p className="text-white/60">
+             Developed and Designed by <a href="https://mistechhub.netlify.app/" target="_blank" >MI3S Techhub</a>
+          </p>
         </div>
+       
       </div>
     </footer>
   );
