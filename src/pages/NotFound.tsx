@@ -1,7 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+
 const NotFound = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the very top (x=0, y=0)
+  }, []);
   const location = useLocation();
 
   useEffect(() => {

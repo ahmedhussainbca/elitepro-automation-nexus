@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -7,6 +8,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the very top (x=0, y=0)
+  }, []);
   const visionRef = useRef(null);
   const teamRef = useRef(null);
   const visionInView = useInView(visionRef, { once: true });

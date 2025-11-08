@@ -1,11 +1,15 @@
 
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the very top (x=0, y=0)
+  }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',

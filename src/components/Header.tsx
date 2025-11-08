@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, X, Menu } from 'lucide-react';
+import { X, Menu } from 'lucide-react'; // Removed ChevronDown
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  // Removed: const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -21,32 +21,13 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
-  // I have restored your original navItems with dropdowns
+  // Modified navItems: Removed the 'dropdown' property entirely
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Industry', path: '/industry' },
-    {
-      name: 'Services',
-      path: '/services',
-      dropdown: [
-        { name: 'PLC Programming', path: '/services#plc' },
-        { name: 'SCADA', path: '/services#scada' },
-        { name: 'HMI', path: '/services#hmi' },
-        { name: 'Vision Systems', path: '/services#vision' },
-        { name: 'Conveyor Systems', path: '/services#conveyor' }
-      ]
-    },
-    {
-      name: 'Products',
-      path: '/products',
-      dropdown: [
-        { name: 'Siemens PLC', path: '/products#siemens' },
-        { name: 'Mitsubishi PLC', path: '/products#mitsubishi' },
-        { name: 'HMIs', path: '/products#hmis' },
-        { name: 'Control Panels', path: '/products#panels' }
-      ]
-    },
+    { name: 'Services', path: '/services' }, // Now a direct link
+    { name: 'Products', path: '/products' }, // Now a direct link
     { name: 'Contact Us', path: '/contact' }
   ];
 
@@ -72,44 +53,20 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* ========================================================== */}
-          {/*  THIS IS THE SECTION THAT WAS ACCIDENTALLY REMOVED        */}
-          {/*  It has now been fully restored.                           */}
-          {/* ========================================================== */}
+          {/* Desktop Navigation (Simplified) */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   to={item.path}
-                  className={`flex items-center space-x-1 text-white hover:text-accent transition-colors duration-200 ${
+                  // Removed onMouseEnter/onMouseLeave handlers
+                  className={`text-white hover:text-accent transition-colors duration-200 ${
                     location.pathname === item.path ? 'text-accent' : ''
                   }`}
-                  onMouseEnter={() => item.dropdown && setOpenDropdown(item.name)}
                 >
                   <span>{item.name}</span>
-                  {item.dropdown && <ChevronDown className="w-4 h-4" />}
+                  {/* Removed ChevronDown and dropdown rendering block */}
                 </Link>
-                
-                {item.dropdown && (
-                  <div
-                    className={`absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 mt-2 transform transition-all duration-200 ${
-                      openDropdown === item.name
-                        ? 'opacity-100 visible translate-y-0'
-                        : 'opacity-0 invisible -translate-y-2'
-                    }`}
-                    onMouseLeave={() => setOpenDropdown(null)}
-                  >
-                    {item.dropdown.map((dropItem) => (
-                      <Link
-                        key={dropItem.name}
-                        to={dropItem.path}
-                        className="block px-4 py-2 text-primary hover:bg-accent/10 hover:text-accent transition-colors duration-200"
-                      >
-                        {dropItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
           </nav>
@@ -126,6 +83,7 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile Navigation (No Dropdown Changes Needed Here) */}
         {isMobileMenuOpen && (
           <motion.nav
             initial={{ opacity: 0, y: -20 }}
