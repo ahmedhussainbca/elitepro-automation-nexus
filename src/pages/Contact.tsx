@@ -1,6 +1,4 @@
-
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -10,16 +8,48 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scrolls to the very top (x=0, y=0)
   }, []);
+
+  // 🚨 IMPORTANT: REPLACE THIS WITH YOUR ACTUAL FORMSPREE ENDPOINT URL
+  // Go to Formspree, create a new form, and copy the URL they provide.
+  const FORM_ENDPOINT = "https://formspree.io/f/myzlzdgo"; 
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  
+  // State to handle submission status: null, 'sending', 'success', 'error'
+  const [submissionStatus, setSubmissionStatus] = useState<'sending' | 'success' | 'error' | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    setSubmissionStatus('sending');
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        // Formspree requires the data to be stringified JSON
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus('success');
+        // Clear the form data after successful submission
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        // Handle non-200 responses (e.g., validation errors)
+        setSubmissionStatus('error');
+        console.error('Formspree submission error:', response.status);
+      }
+    } catch (error) {
+      // Handle network errors
+      setSubmissionStatus('error');
+      console.error('Network error during form submission:', error);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,6 +57,10 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Reset status when the user starts typing again
+    if (submissionStatus) {
+        setSubmissionStatus(null);
+    }
   };
 
   return (
@@ -168,10 +202,29 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg"
+                  // Disable button while sending
+                  disabled={submissionStatus === 'sending'} 
+                  className={`w-full font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg 
+                    ${submissionStatus === 'sending' 
+                        ? 'bg-gray-400 text-gray-700 cursor-not-allowed' // Grey out when sending
+                        : 'bg-accent hover:bg-accent/90 text-primary'
+                    }`}
                 >
-                  Send Message
+                  {/* Dynamic button text based on status */}
+                  {submissionStatus === 'sending' ? 'Sending Message...' : 'Send Message'}
                 </motion.button>
+                
+                {/* Submission Feedback Messages */}
+                {submissionStatus === 'success' && (
+                    <p className="text-green-600 font-semibold mt-4">
+                        Thank you! Your message has been sent successfully.
+                    </p>
+                )}
+                {submissionStatus === 'error' && (
+                    <p className="text-red-600 font-semibold mt-4">
+                        Oops! Something went wrong. Please check your network or try again later.
+                    </p>
+                )}
               </form>
             </motion.div>
           </div>
@@ -197,7 +250,6 @@ const Contact = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <iframe
-              //src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6961267456896!2d80.17855731482166!3d12.994010490854286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526157c1125039%3A0x2b2b7a7a7a7a7a7a!2sRamapuram%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.793441670415!2d80.1878169!3d13.0277011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52672cab8a9b05%3A0x7531044dc6ec3d48!2sBakthi%20Vedantha%203rd%20Ave%2C%20Manapakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e1!3m2!1sen!2sin!4v1760696426499!5m2!1sen!2sin"
               width="100%"
               height="400"
